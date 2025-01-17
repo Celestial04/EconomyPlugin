@@ -1,0 +1,14 @@
+economy:
+  players: { }
+
+shop:
+  items:
+    DIAMOND:
+      price: 100.0
+      available: true
+    IRON_INGOT:
+      price: 10.0
+      available: true
+    STONE:
+      price: 5.0
+      available: true

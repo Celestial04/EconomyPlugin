@@ -1,0 +1,29 @@
+name: EconomyPlugin
+version: 1.0
+main: dev.katsuu04.economyplugin.EconomyPlugin
+api-version: 1.21.3
+commands:
+  balance:
+    description: Affiche le solde de votre compte.
+  shop:
+    description: Ouvre la boutique.
+  sell:
+    description: Ouvre l'interface pour vendre vos items.
+  setprice:
+    description: Ajuster le prix d'un item.
+    usage: /setprice <item> <prix>
+    permission: economyplugin.setprice
+  adjustprices:
+    description: Ouvre le menu d'ajustement des prix.
+    usage: /adjustprices
+    permission: economyplugin.adjustprices
+  pay:
+    description: Transférer de l'argent à un autre joueur.
+    usage: /pay <joueur> <montant>
+    permission: economyplugin.pay
+  reloadplugin:
+    description: Recharge la configuration du plugin.
+    usage: /reloadplugin
+    permission: economyplugin.reload
+    permission-message: §cVous n'avez pas la permission de recharger le plugin.
+

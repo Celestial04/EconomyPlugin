@@ -1,0 +1,70 @@
+messages:
+  shop-opened: "&aVous avez ouvert la boutique."
+  item-purchased: "&aVous avez acheté %item% pour &6%price% &amonnaie !"
+  insufficient-funds: "&cVous n'avez pas assez de monnaie pour acheter cet item !"
+  invalid-number: "&cVeuillez entrer un nombre valide !"
+
+  price-set: "&aLe prix de %item% a été défini à &6%price% &amonnaie !"
+
+  shop-title: "&aBoutique"
+  shop-item-name: "&e%item%"
+  shop-item-price: "&6Prix : %price% monnaie"
+  shop-item-click: "&7Cliquez pour acheter"
+
+  withdraw-error: "&cErreur lors du retrait de monnaie !"
+
+  sell-menu-title: "&aMenu de Vente"
+  sell-menu-opened: "&aVous avez ouvert le menu de vente."
+  sell-invalid-price: "&cErreur: le prix de cet item est invalide."
+  sell-not-enough-items: "&cVous n'avez pas assez de %item% pour les vendre !"
+  sell-success: "&aVous avez vendu %amount%x %item% pour &6%total% &amonnaie !"
+  sell-added-to-shop: "&aL'item %item% a été ajouté à la boutique !"
+
+  price-adjustment-title: "Modifier le prix : %item%"
+  price-adjustment-title-prefix: "Modifier le prix : "
+  price-adjustment-minus-10: "§c-10"
+  price-adjustment-minus-1: "§c-1"
+  price-adjustment-minus-0.5: "§c-0.5"
+  price-adjustment-plus-0.5: "§a+0.5"
+  price-adjustment-plus-1: "§a+1"
+  price-adjustment-plus-10: "§a+10"
+  price-adjustment-current-price: "§ePrix actuel : §6%price%"
+  price-adjustment-validate: "§aValider"
+  price-adjustment-new-price: "§aLe nouveau prix de %item% est §6%price% §a."
+
+  item-selection-title: "Sélectionnez un item"
+  item-selection-item-name: "§a%item%"
+  item-selection-item-lore: "§eCliquez pour ajuster le prix"
+
+  shop-command-player-only: "Seuls les joueurs peuvent ouvrir la boutique !"
+
+  setprice-no-permission: "§cVous n'avez pas la permission d'utiliser cette commande !"
+  setprice-usage: "§cUsage : /setprice <item> <prix>"
+  setprice-invalid-item: "§cL'item {item} n'existe pas !"
+  setprice-negative-price: "§cLe prix doit être un nombre positif !"
+  setprice-invalid-price: "§cLe prix doit être un nombre valide !"
+  setprice-success: "§aLe prix de {item} a été défini à §6{price} §amonnaie !"
+
+  sell-not-player: "§cSeuls les joueurs peuvent ouvrir le menu de vente !"
+
+  balance-not-player: "§cSeuls les joueurs peuvent exécuter cette commande."
+  balance-display: "§aVotre solde est de §e{balance} pièces."
+
+  adjustprices-not-player: "§cSeuls les joueurs peuvent exécuter cette commande !"
+  adjustprices-no-permission: "§cVous n'avez pas la permission d'utiliser cette commande !"
+
+  pay-not-player: "§cSeuls les joueurs peuvent utiliser cette commande !"
+  pay-usage: "§cUsage : /pay <joueur> <montant>"
+  pay-player-not-found: "§cLe joueur spécifié est introuvable ou hors ligne."
+  pay-self-transfer: "§cVous ne pouvez pas transférer de l'argent à vous-même !"
+  pay-invalid-amount: "§cLe montant spécifié est invalide. Veuillez entrer un nombre positif."
+  pay-insufficient-balance: "§cVous n'avez pas assez d'argent pour effectuer ce transfert."
+  pay-success: "§aVous avez transféré §6{amount} pièces §aà §6{player}§a."
+  pay-received: "§aVous avez reçu §6{amount} pièces §ade la part de §6{player}§a."
+
+  reload:
+    no-permission: "§cVous n'avez pas la permission d'utiliser cette commande."
+    success: "§aLa configuration a été rechargée avec succès !"
+
+  only-players: "§cSeuls les joueurs peuvent ouvrir la boutique !"
+  no-permission: "§cVous n'avez pas la permission d'utiliser cette commande !"

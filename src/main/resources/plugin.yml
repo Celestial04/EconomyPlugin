@@ -21,9 +21,9 @@ commands:
     description: Transférer de l'argent à un autre joueur.
     usage: /pay <joueur> <montant>
     permission: economyplugin.pay
-  reloadplugin:
+  epReload:
     description: Recharge la configuration du plugin.
-    usage: /reloadplugin
+    usage: /epReload
     permission: economyplugin.reload
     permission-message: §cVous n'avez pas la permission de recharger le plugin.
 

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.katsuu04</groupId>
-    <artifactId>economyplugin</artifactId>
+    <artifactId>EconomyPlugin</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
     <name>EconomyPlugin</name>

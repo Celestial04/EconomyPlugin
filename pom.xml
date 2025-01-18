@@ -8,7 +8,7 @@
     <artifactId>EconomyPlugin</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
-    <name>EconomyPlugin-1.21.3</name>
+    <name>EconomyPlugin</name>
     <description>Un plugin d'économie avec un système de boutique et de vente.</description>
 
     <properties>

@@ -6,7 +6,7 @@
 
     <groupId>dev.katsuu04</groupId>
     <artifactId>economyplugin</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
     <name>EconomyPlugin</name>
     <description>Un plugin d'économie avec un système de boutique et de vente.</description>

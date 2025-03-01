@@ -2,10 +2,13 @@ package dev.katsuu04.economyplugin.commands;
 
 import dev.katsuu04.economyplugin.EconomyPlugin;
 import dev.katsuu04.economyplugin.gui.ShopGUI;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
+import java.util.Map;
 
 public class ShopCommand implements CommandExecutor {
 
@@ -26,7 +29,24 @@ public class ShopCommand implements CommandExecutor {
         }
 
         Player player = (Player) sender;
-        shopGUI.openShop(player);
+
+        if (args.length > 0 && args[0].equalsIgnoreCase("list")) {
+            listShopItems(player);
+        } else {
+            shopGUI.openShop(player);
+        }
         return true;
+    }
+
+    private void listShopItems(Player player) {
+        player.sendMessage("§aItems disponibles dans la boutique :");
+        for (String materialName : plugin.getConfig().getConfigurationSection("shop.items").getKeys(false)) {
+            Material material = Material.valueOf(materialName);
+            if (plugin.getItemManager().isAvailable(material)) {
+                double price = plugin.getItemManager().getPrice(material);
+                player.sendMessage(plugin.formatMessage("shop-item-name", Map.of("item", material.name()))
+                        + " §e- Prix : " + price);
+            }
+        }
     }
 }

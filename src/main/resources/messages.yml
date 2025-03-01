@@ -1,70 +1,60 @@
-messages:
-  shop-opened: "&aVous avez ouvert la boutique."
-  item-purchased: "&aVous avez acheté %item% pour &6%price% &amonnaie !"
-  insufficient-funds: "&cVous n'avez pas assez de monnaie pour acheter cet item !"
-  invalid-number: "&cVeuillez entrer un nombre valide !"
+#here you can translate all of this plugin, enjoy!!
 
-  price-set: "&aLe prix de %item% a été défini à &6%price% &amonnaie !"
+# %title% > shop menu title
+# %item% > item name
+# %price% > price of the product
+shop:
+  only-players: "Seuls les joueurs peuvent utiliser cette commande."
+  no-permission: "Vous n'avez pas la permission d'utiliser cette commande."
+  title: "Boutique"
+  title-with-discount: "%title% §a(Réduction)"
+  item-name: "§f%item%"
+  item-price: "§7Prix: §f%price%"
+  item-click: "§7Cliquez pour acheter"
+  insufficient-funds: "§cVous n'avez pas assez d'argent pour acheter cet item."
+  item-purchased: "§aVous avez acheté %item% pour %price% monnaie."
+  withdraw-error: "§cErreur lors du retrait de l'argent."
+  no-category: "§cL'item %item% n'a pas de catégorie définie."
 
-  shop-title: "&aBoutique"
-  shop-item-name: "&e%item%"
-  shop-item-price: "&6Prix : %price% monnaie"
-  shop-item-click: "&7Cliquez pour acheter"
+# %total_price% > product amount to sell
+# %amount% > amount of items to sell
+# %category% shop's category name
+sell:
+  no-permission: "§cVous n'avez pas la permission de vendre des items."
+  invalid-amount: "§cLa quantité spécifiée n'est pas valide."
+  not-enough-items: "§cVous n'avez pas assez d'items dans votre main pour vendre cette quantité."
+  item-sold: "§aVous avez vendu %amount% %item% pour %total_price% monnaie dans la catégorie %category%."
+  no-item-in-hand: "§cVous devez tenir un item dans votre main pour le vendre."
 
-  withdraw-error: "&cErreur lors du retrait de monnaie !"
+additem:
+  no-permission: "§cVous n'avez pas la permission d'ajouter des items."
+  usage: "§cUsage: /additem <item> [price]"
+  unknown-item: "§cItem inconnu: %item%"
+  item-added: "§aL'item %item% a été ajouté à la boutique dans la catégorie %category%!"
 
-  sell-menu-title: "&aMenu de Vente"
-  sell-menu-opened: "&aVous avez ouvert le menu de vente."
-  sell-invalid-price: "&cErreur: le prix de cet item est invalide."
-  sell-not-enough-items: "&cVous n'avez pas assez de %item% pour les vendre !"
-  sell-success: "&aVous avez vendu %amount%x %item% pour &6%total% &amonnaie !"
-  sell-added-to-shop: "&aL'item %item% a été ajouté à la boutique !"
+# %balance% > amount remaining in player's bank account
+balance:
+  no-permission: "§cVous n'avez pas la permission de vérifier votre solde."
+  balance-message: "§aVotre solde est de %balance% monnaie."
 
-  price-adjustment-title: "Modifier le prix : %item%"
-  price-adjustment-title-prefix: "Modifier le prix : "
-  price-adjustment-minus-10: "§c-10"
-  price-adjustment-minus-1: "§c-1"
-  price-adjustment-minus-0.5: "§c-0.5"
-  price-adjustment-plus-0.5: "§a+0.5"
-  price-adjustment-plus-1: "§a+1"
-  price-adjustment-plus-10: "§a+10"
-  price-adjustment-current-price: "§ePrix actuel : §6%price%"
-  price-adjustment-validate: "§aValider"
-  price-adjustment-new-price: "§aLe nouveau prix de %item% est §6%price% §a."
+# %player% > targeted player to pay
+pay:
+  no-permission: "§cVous n'avez pas la permission de payer un joueur."
+  invalid-player: "§cJoueur introuvable: %player%"
+  insufficient-funds: "§cVous n'avez pas assez d'argent pour effectuer ce paiement."
+  payment-success: "§aVous avez payé %amount% monnaie à %player%."
 
-  item-selection-title: "Sélectionnez un item"
-  item-selection-item-name: "§a%item%"
-  item-selection-item-lore: "§eCliquez pour ajuster le prix"
+# set shop discount in %
+discount:
+  no-permission: "§cVous n'avez pas la permission d'appliquer une réduction."
+  global-discount-applied: "§aRéduction globale appliquée!"
+  global-discount-removed: "§aRéduction globale supprimée!"
 
-  shop-command-player-only: "Seuls les joueurs peuvent ouvrir la boutique !"
-
-  setprice-no-permission: "§cVous n'avez pas la permission d'utiliser cette commande !"
-  setprice-usage: "§cUsage : /setprice <item> <prix>"
-  setprice-invalid-item: "§cL'item {item} n'existe pas !"
-  setprice-negative-price: "§cLe prix doit être un nombre positif !"
-  setprice-invalid-price: "§cLe prix doit être un nombre valide !"
-  setprice-success: "§aLe prix de {item} a été défini à §6{price} §amonnaie !"
-
-  sell-not-player: "§cSeuls les joueurs peuvent ouvrir le menu de vente !"
-
-  balance-not-player: "§cSeuls les joueurs peuvent exécuter cette commande."
-  balance-display: "§aVotre solde est de §e{balance} pièces."
-
-  adjustprices-not-player: "§cSeuls les joueurs peuvent exécuter cette commande !"
-  adjustprices-no-permission: "§cVous n'avez pas la permission d'utiliser cette commande !"
-
-  pay-not-player: "§cSeuls les joueurs peuvent utiliser cette commande !"
-  pay-usage: "§cUsage : /pay <joueur> <montant>"
-  pay-player-not-found: "§cLe joueur spécifié est introuvable ou hors ligne."
-  pay-self-transfer: "§cVous ne pouvez pas transférer de l'argent à vous-même !"
-  pay-invalid-amount: "§cLe montant spécifié est invalide. Veuillez entrer un nombre positif."
-  pay-insufficient-balance: "§cVous n'avez pas assez d'argent pour effectuer ce transfert."
-  pay-success: "§aVous avez transféré §6{amount} pièces §aà §6{player}§a."
-  pay-received: "§aVous avez reçu §6{amount} pièces §ade la part de §6{player}§a."
-
-  reload:
-    no-permission: "§cVous n'avez pas la permission d'utiliser cette commande."
-    success: "§aLa configuration a été rechargée avec succès !"
-
-  only-players: "§cSeuls les joueurs peuvent ouvrir la boutique !"
-  no-permission: "§cVous n'avez pas la permission d'utiliser cette commande !"
+# %seller% > seller who sell the product
+# %amount% > amount of item remaining
+# %date% > date formatted to "YYYY-MM-DD HH:MM:SS"
+general:
+  reloaded: "§aConfiguration rechargée!"
+  item-quantity: "§7Quantité disponible: §f%amount%"
+  item-seller: "§7Vendeur: §f%seller%"
+  item-sell-date: "§7Mis en vente le: §f%date%"

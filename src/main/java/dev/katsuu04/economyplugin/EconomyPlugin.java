@@ -1,10 +1,8 @@
 package dev.katsuu04.economyplugin;
 
 import dev.katsuu04.economyplugin.commands.*;
-import dev.katsuu04.economyplugin.gui.ItemSelectionGUI;
-import dev.katsuu04.economyplugin.gui.PriceAdjustmentGUI;
-import dev.katsuu04.economyplugin.gui.SellGUI;
-import dev.katsuu04.economyplugin.gui.ShopGUI;
+import dev.katsuu04.economyplugin.gui.*;
+import dev.katsuu04.economyplugin.utils.SellTabCompleter;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -40,25 +38,32 @@ public class EconomyPlugin extends JavaPlugin {
         this.itemManager = new ItemManager(this);
         ItemSelectionGUI itemSelectionGUI = new ItemSelectionGUI(this);
         PriceAdjustmentGUI priceAdjustmentGUI = new PriceAdjustmentGUI(this);
+        AddItemGUI addItemGUI = new AddItemGUI(this);
+        ShopGUI shopGUI = new ShopGUI(this);
 
         // Enregistrer les commandes
         getCommand("balance").setExecutor(new BalanceCommand(this));
         getCommand("shop").setExecutor(new ShopCommand(this));
         getCommand("sell").setExecutor(new SellCommand(this));
+        getCommand("sell").setTabCompleter(new SellTabCompleter(this)); // Enregistrer le TabCompleter
         getCommand("setprice").setExecutor(new SetPriceCommand(this));
         getCommand("adjustprices").setExecutor(new AdjustPricesCommand(this, itemSelectionGUI));
         getCommand("pay").setExecutor(new PayCommand(this));
         getCommand("epReload").setExecutor(new ReloadCommand(this));
+        getCommand("additem").setExecutor(new AddItemCommand(this));
+        getCommand("discount").setExecutor(new DiscountCommand(this));
 
-
+        // Enregistrer les écouteurs d'événements
         getServer().getPluginManager().registerEvents(new PriceAdjustmentGUI(this), this);
-        getServer().getPluginManager().registerEvents(new ShopGUI(this), this);
+        getServer().getPluginManager().registerEvents(shopGUI, this);
         getServer().getPluginManager().registerEvents(new SellGUI(this), this);
         getServer().getPluginManager().registerEvents(itemSelectionGUI, this);
         getServer().getPluginManager().registerEvents(priceAdjustmentGUI, this);
+        getServer().getPluginManager().registerEvents(addItemGUI, this);
 
         getLogger().info("EconomyPlugin activé !");
     }
+
 
     public Map<UUID, Material> getPendingPriceAdjustments() {
         return pendingPriceAdjustments;

@@ -1,5 +1,5 @@
 name: EconomyPlugin
-version: 1.0
+version: 1.5
 main: dev.katsuu04.economyplugin.EconomyPlugin
 api-version: 1.21.3
 commands:
@@ -26,4 +26,10 @@ commands:
     usage: /epReload
     permission: economyplugin.reload
     permission-message: §cVous n'avez pas la permission de recharger le plugin.
+  additem:
+    description: Ajoute un item à la boutique.
+    permission: economyplugin.additem
+  discount:
+    description: Applique une réduction sur un item du shop.
+    permission: economyplugin.discount
 

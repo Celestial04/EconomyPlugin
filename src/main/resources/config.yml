@@ -1,14 +1,51 @@
-economy:
-  players: { }
+# EconomyPlugin config file
+# here you can add/remove categories for the shop, you can also disable the category mode for the
+# shop when you set nothing to shop
+
+# ------------ EXEMPLE ------------
+#shop:
+#  categories:
+#    cheated:
+#      enabled: false
+#      display-name: "cheated category"
+#    rich:
+#      enabled: true
+#      display-name: "rich people can buy"
+#    general:
+#      enabled: true
+#      display-name: "general"
+#  items:
+#    DIRT:
+#      price: 1.0
+#      available: true
+#      category: general
+#    CHERRY_SIGN:
+#      price: 1337.0
+#      available: true
+#      category: rich
+#    DIAMOND_PICKAXE:
+#      price: 3.0
+#      available: true
+#      category: cheated
+
 
 shop:
+  categories:
+    blocks:
+      enabled: true
+      display-name: "blocks"
+    cheated:
+      enabled: false
+      display-name: "cheated"
+    misc:
+      enabled: true
+      display-name: "for newbies"
   items:
-    DIAMOND:
+    DIRT:
       price: 100.0
       available: true
-    IRON_INGOT:
-      price: 10.0
+      category: blocks
+    REDSTONE:
+      price: 50.0
       available: true
-    STONE:
-      price: 5.0
-      available: true
+      category: cheated
